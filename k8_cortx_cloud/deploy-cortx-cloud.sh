@@ -1184,7 +1184,7 @@ function deployCortxHa()
         -n "${namespace}"
 
     printf "\nWait for CORTX HA to be ready"
-    if ! waitForAllDeploymentsAvailable 120s "CORTX HA" deployment/cortx-ha; then
+    if ! waitForAllDeploymentsAvailable 500s "CORTX HA" deployment/cortx-ha; then
         echo "Failed.  Exiting script."
         exit 1
     fi
